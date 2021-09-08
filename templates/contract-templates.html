@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="card">
+        <h5 class="card-header">Exclusive Mandate</h5>
+        <div class="card-body">
+            <h5 class="card-title">Exclusive Mandate Contract Template</h5>
+            <p class="card-text">An exclusive mandate provides us with the sole or exclusive right to market a property on on the owner's behalf.</p>
+            <a href="{{ url_for('initiate_contract') }}" class="btn btn-success" style="color: ghostwhite"> Create </a>
+            <a href="#" class="btn btn-success" style="color: ghostwhite"> View </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h5 class="card-header">OTP</h5>
+        <div class="card-body">
+            <h5 class="card-title">Offer to Purchase</h5>
+            <p class="card-text">An offer to purchase (OTP) is the document governing the sale agreement of a property between the buyer and seller.</p>
+            <a href="{{ url_for('initiate_contract') }}" class="btn btn-success" style="color: ghostwhite"> Create </a>
+            <a href="#" class="btn btn-success" style="color: ghostwhite"> View </a>
+        </div>
+    </div>
+
+    <script>
+    function customer_info()
+    {
+         location.href = "{{ url_for('customer_info') }}";
+    }
+    </script>
+
+
+{% endblock %}

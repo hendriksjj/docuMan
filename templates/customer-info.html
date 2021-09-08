@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Client Information</div>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <form accept-charset="utf-8">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" placeholder="" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_number" class="form-label">ID Number</label>
+                            <input type="text" name="id_number" placeholder="" class="form-control" required>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col">
+                                <label for="title" class="form-label">Title</label>
+                                <input name="title" type="text" placeholder="" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="name" class="form-label">Name</label>
+                                <input name="name" type="text" placeholder="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone_number" class="form-label">Phone Number</label>
+                            <input type="text" name="phone_number" placeholder="" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passport_number" class="form-label">Passport Number (Non-SA Resident)</label>
+                            <input type="text" name="passport_number" placeholder="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="owner_property_address" class="form-label">Property Address</label>
+                            <input type="text" name="owner_property_address" placeholder="" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="owner_property_value" class="form-label">Property Listed Value</label>
+                            <input type="text" name="owner_property_value" placeholder="" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="selling_mandate_end_date" class="form-label">Selling Mandate end date</label>
+                            <input type="text" name="selling_mandate_end_date" placeholder="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-success" onclick="sole_mandate()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function sole_mandate()
+    {
+         location.href = "{{ url_for('sole_mandate') }}";
+    }
+    </script>
+
+{% endblock %}

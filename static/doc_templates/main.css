@@ -1,0 +1,61 @@
+/* Styles go here */
+.document {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.3in;
+  width: 8.5in;
+  background-color: #faffff;
+  -webkit-box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
+}
+
+.page-header, .page-header-space {
+  height: 100px;
+}
+
+.page-footer, .page-footer-space {
+  height: 50px;
+
+}
+
+.page-footer {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.3in;
+  width: 8.5in;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid black; /* for demo */
+  background: white; /* for demo */
+}
+
+.page-header {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.3in;
+  width: 8.5in;
+  position: fixed;
+  top: 0mm;
+  border-bottom: 1px solid black; /* for demo */
+  background: white; /* for demo */
+}
+
+.page {
+  page-break-after: always;
+}
+
+@page {
+  margin: 20mm
+}
+
+@media print {
+   thead {display: table-header-group;}
+   tfoot {display: table-footer-group;}
+
+   button {display: none;}
+
+   body {margin: 0;}
+}
