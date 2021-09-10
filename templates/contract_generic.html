@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='doc_templates/main.css') }}" />
+</head>
+
+<button type="button" onClick="printDiv('printDoc')" style="background: white"> <!--window.print() -->
+  Print Contract
+</button>
+
+<body >
+    <main class="document" id="printDoc">
+
+        <pre>
+            PAM GOLDING PROPERTIES
+            EXCLUSIVE MANDATE
+            <u>                                                     </u>
+            A Franchisee of Pam Golding Franchise Services (Pty) Ltd.
+            <u>                                                     </u>
+            Reg. No:<u>                                                     </u>
+            VAT No:<u>                                                     </u>
+
+            1. Title:<u>                         </u> Name:<u>                         </u>
+
+            ID Number (SA Resident):<u>                         </u> Phone no. :<u>                         </u>
+            Passport Number (Non-SA Resident):<u>                         </u>
+            being the owner/s of the property known as<u>                         </u>
+            hereby irrevocably instruct PAM GOLDING PROPERTIES (”PGP”) to procure a willing and able Purchaser for the property described above
+            for the sum of R <u>                         </u> (<u>                         </u>)
+
+            or such other price agreed upon by the Purchaser and myself/ourselves.
+
+            2.	BROKERAGE: Brokerage calculated at 7.5% on the purchase price plus VAT thereon, shall be payable to PGP by me/us if they obtain a binding offer from a willing and able Purchaser.
+            3.	PGP shall have the sole and exclusive selling rights in respect of the property until 24h00 on <u>          </u> and
+            they will be entitled to the brokerage plus VAT, as set out above, if the property is sold through any source whatsoever during the said
+            mandate period, or if any Purchaser introduced by PGP during this exclusive mandate purchases the property described above subsequent
+            to the expiry of this mandate. Accordingly, during the aforesaid period:
+            3.1 No agency other than PGP will be mandated to sell the property;
+            3.2 I/We will not personally market or sell the property;
+            3.3 I/We will not in any way hinder, frustrate or prevent PGP from effecting a sale in terms of this mandate.
+
+            4.	PGP, its agents and the agent/s’ representative and any prospective Purchaser/s shall have access to view the property at all reasonable times.
+
+            5.	PGP shall have the right to affix boards or notices to the property advertising the property for sale, and once sold, that it has been sold.
+
+            6.	I/We hereby warrant that there are no latent defects of which I am / we are aware relating to the property.
+
+            7.		Benefits to the Seller - see accompanying brochure.
+
+            SIGNED AT <u>           </u> on	<u>           </u>20<u>  </u>
+
+
+            <u>                         </u>         <u>                         </u>
+            WITNESS		                       OWNER/S
+            <u>                         </u>         <u>                         </u>
+            WITNESS		                       SPOUSE (hereby consenting in terms of Section 15 of Act 88/84)
+            <u>                         </u>         <u>                         </u>
+            DATE		                       For PAM GOLDING PROPERTIES
+            Listing No <u>                         </u>
+        </pre>
+
+
+
+    </main>
+
+</body>
+
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+
+    location.href = "{{ url_for('dashboard') }}";
+
+
+
+}
+</script>
+
+
+{% endblock %}

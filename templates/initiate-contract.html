@@ -7,35 +7,39 @@
         <p class="card-text">With integration to your CRM system, DocuMan is able to auto complete contracts and integrate back seamlessly to your CRM system</p>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"> Go! </button>
 
-        <div class="modal fade" id="exampleModal" role="dialog" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">CRM Integration</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-start">
-                        <p>Please provide the following client information: </p>
-                        <form accept-charset="utf-8">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" placeholder="Email Address" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">ID Number</label>
-                                <input type="number" name="id_number" placeholder="0000000000000" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <a href="{{ url_for('customer_info') }}" class="btn btn-success" style="color: ghostwhite"> Search </a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form method="POST">
+                <div class="modal fade" id="exampleModal" role="dialog" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">CRM Integration</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                            <p>Please provide the following client information: </p>
+                            <form accept-charset="utf-8">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input id="email" type="email" name="email" placeholder="Email Address" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="idNumber" class="form-label">ID Number</label>
+                                    <input id="idNumber" type="number" name="idNumber" placeholder="0000000000000" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <input id="search" type="submit" value="search" class="btn btn-success">
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
+            </form>
+
 
     </div>
     </div>

@@ -7,47 +7,48 @@
                 <div class="card-header">Client Information</div>
                 <div class="card-body">
                     <h5 class="card-title"></h5>
-                    <form accept-charset="utf-8">
+                    <form method="POST" accept-charset="utf-8">
+
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" placeholder="" class="form-control" required>
+                            <input type="email" name="email" placeholder="" class="form-control" value="{{ customerInfoForm.email.default }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="id_number" class="form-label">ID Number</label>
-                            <input type="text" name="id_number" placeholder="" class="form-control" required>
+                            <label for="idNumber" class="form-label">ID Number</label>
+                            <input id="idNumber" type="text" name="idNumber" placeholder="" class="form-control" value="{{ customerInfoForm.idNumber.default }}" required>
                         </div>
                         <div class="row g-2">
                             <div class="col">
                                 <label for="title" class="form-label">Title</label>
-                                <input name="title" type="text" placeholder="" class="form-control">
+                                <input id="title" name="title" type="text" placeholder="" value="{{ customerInfoForm.title.default }}" class="form-control">
                             </div>
                             <div class="col">
                                 <label for="name" class="form-label">Name</label>
-                                <input name="name" type="text" placeholder="" class="form-control">
+                                <input id="name" name="name" type="text" placeholder="" value="{{ customerInfoForm.name.default }}" class="form-control">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="phone_number" class="form-label">Phone Number</label>
-                            <input type="text" name="phone_number" placeholder="" class="form-control" required>
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input id="phoneNumber" type="text" name="phoneNumber" placeholder="" value="{{ customerInfoForm.phoneNumber.default }}" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="passport_number" class="form-label">Passport Number (Non-SA Resident)</label>
-                            <input type="text" name="passport_number" placeholder="" class="form-control">
+                            <label for="passportNumber" class="form-label">Passport Number (Non-SA Resident)</label>
+                            <input id="passportNumber" type="text" name="passport_number" placeholder="" value="{{ customerInfoForm.passportNumber.default }}" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="owner_property_address" class="form-label">Property Address</label>
-                            <input type="text" name="owner_property_address" placeholder="" class="form-control" required>
+                            <label for="propertyAddress" class="form-label">Property Address</label>
+                            <input id="propertyAddress" type="text" name="propertyAddress" placeholder="" value="{{ customerInfoForm.propertyAddress.default }}" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="owner_property_value" class="form-label">Property Listed Value</label>
-                            <input type="text" name="owner_property_value" placeholder="" class="form-control" required>
+                            <label for="propertyListedValue" class="form-label">Property Listed Value</label>
+                            <input id="propertyListedValue" type="text" name="propertyListedValue" placeholder="" value="{{ customerInfoForm.propertyListedValue.default }}" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="selling_mandate_end_date" class="form-label">Selling Mandate end date</label>
-                            <input type="text" name="selling_mandate_end_date" placeholder="" class="form-control">
+                            <label for="sellingMandateEndDate" class="form-label">Selling Mandate end date</label>
+                            <input id="sellingMandateEndDate" type="text" name="sellingMandateEndDate" value="{{ customerInfoForm.sellingMandateEndDate.default }}" placeholder="" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <input type="submit" class="btn btn-success" onclick="sole_mandate()">
+                            <input id="submit" type="submit" value="submit" class="btn btn-success">
                         </div>
                     </form>
                 </div>
